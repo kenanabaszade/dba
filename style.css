@@ -1,0 +1,1033 @@
+@font-face {
+  font-family: "Jetbrainsmono";
+  font-weight: 400;
+  font-style: normal;
+  src: url("./assets/fonts/JetBrainsMono-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Jetbrainsmono";
+  font-weight: 400;
+  font-style: italic;
+  src: url("./assets/fonts/JetBrainsMono-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Jetbrainsmono";
+  font-weight: 700;
+  font-style: normal;
+  src: url("./assets/fonts/JetBrainsMono-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Jetbrainsmono";
+  font-weight: 900;
+  font-style: normal;
+  src: url("./assets/fonts/JetBrainsMono-Bold.ttf") format("truetype");
+}
+
+/* Reset CSS */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+.searchicon {
+  width: 20px;
+  object-fit: contain;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body {
+  font-family: "Jetbrainsmono", sans-serif !important;
+  background-color: #121212;
+  color: white;
+}
+
+.navbar {
+  background-color: #2e2e2e;
+  width: 90%;
+  margin: 16px auto;
+  border-radius: 20px;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #fff !important;
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  color: #fff !important;
+  padding-bottom: 0.5rem;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+
+.phone-button {
+  background-color: #468faf;
+  border: none;
+  border-radius: 14px;
+  color: #fff;
+  padding: 10px 20px;
+  font-weight: 500;
+  margin-right: 40px;
+}
+
+.phone-button:hover {
+  background-color: #468faf;
+  color: #fff;
+}
+
+.navbaranimation a {
+  font-size: 18px;
+}
+.navbaranimation {
+  position: relative;
+  width: 65% !important;
+  border: 2px solid #468faf; /* Static border */
+  border-radius: 10px;
+  padding: 2px;
+  margin: 0 auto;
+  /* overflow: hidden;  */
+}
+
+/* Common styles for the moving lines */
+.navbaranimation::before,
+.navbaranimation::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 50px; /* Line width */
+}
+
+/* Top border animation */
+.navbaranimation::before {
+  top: -2px;
+  left: -50px;
+  animation: topLineMove 3s ease-in-out infinite alternate;
+  background-color: #2e2e2e;
+  -webkit-animation: topLineMove 3s ease-in-out infinite alternate;
+}
+
+/* Bottom border animation */
+.navbaranimation::after {
+  bottom: -2px;
+  right: -50px;
+  background-color: #2e2e2e;
+  animation: bottomLineMove 3s ease-in-out infinite alternate;
+  -webkit-animation: bottomLineMove 3s ease-in-out infinite alternate;
+}
+
+/* Keyframes for top line */
+@keyframes topLineMove {
+  0% {
+    left: 50px;
+  }
+  100% {
+    left: 90%;
+  }
+}
+
+@keyframes bottomLineMove {
+  0% {
+    right: 50px;
+  }
+  100% {
+    right: 90%;
+  }
+}
+
+#text-container {
+  font-size: 6em;
+  line-height: 140px;
+  width: 38% !important;
+  overflow: hidden;
+  width: fit-content;
+  height: 420px;
+  color: white;
+}
+
+.mediumcontent {
+  padding: 100px 98px;
+}
+
+.experts-section {
+  padding: 2rem 100px;
+}
+.expert-card:hover {
+  box-shadow: 0 0 19px #468faf, 0 0 9px #468faf, 0 0 18px #468faf;
+}
+.cursor {
+  display: inline-block;
+  animation: blink 0.8s infinite;
+  color: #fff; /* Neon blue */
+  font-weight: bold;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.expert-card:hover .expert-image-wrapper img {
+  filter: grayscale(0%);
+}
+.section-title {
+  text-align: start;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+/* Expert card container */
+.expert-card {
+  display: flex;
+  background-color: #1c1c1c;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease-in-out;
+  height: 560px;
+  padding: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+/* Expert image wrapper */
+.expert-image-wrapper {
+  min-width: 250px;
+  max-width: 446px;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.expert-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
+}
+
+.expert-image-wrapper img:hover {
+  filter: grayscale(0%);
+}
+
+.expert-info {
+  padding: 1.5rem;
+}
+
+.expert-info ul {
+  font-size: 11px !important;
+}
+.expert-info p {
+  padding-bottom: 10px;
+  font-size: 12px;
+}
+
+.expert-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.expert-info ul {
+  list-style-type: disc;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.banner {
+  background-color: #e5e5e5;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo img {
+  max-height: 100px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
+}
+.logo img:hover {
+  filter: grayscale(0%);
+}
+
+.custom-button {
+  background-color: #0a0f12;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 18px 24px;
+  border: none;
+  margin-right: 81px;
+  width: 260px;
+  border-radius: 10px;
+  text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 8px rgba(0, 200, 255, 0.5);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.custom-button:hover {
+  box-shadow: 0px 0px 12px rgba(0, 200, 255, 0.8);
+}
+
+.books {
+  background: #262626;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+
+.topbooks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottombooks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 35px 0;
+}
+
+.booktwo img {
+  width: 627px;
+}
+
+.bookone img {
+  width: 643px;
+}
+
+.consultation-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  width: 100%; 
+}
+
+.consultation-text {
+  max-width: 50%;
+}
+
+.consultation-title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.consultation-description {
+  font-size: 21px;
+  color: #bbb;
+  margin-bottom: 120px;
+  line-height: 1.5;
+}
+
+.consultation-button {
+  background-color: #111;
+  color: white;
+  font-size: 18px;
+  padding: 17px 28px;
+  width: 170px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 8px rgba(0, 200, 255, 0.5);
+  transition: 0.3s ease-in-out;
+}
+
+.consultation-button:hover {
+  box-shadow: 0px 0px 12px rgba(0, 200, 255, 0.8);
+}
+
+.consultation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 50%;
+}
+
+.consultation-input,
+.consultation-textarea {
+  background-color: #f8f8f8;
+  border: none;
+  padding: 14px;
+  font-size: 18px;
+  border-radius: 10px;
+  width: 100%;
+  color: #444;
+}
+
+.consultation-textarea {
+  height: 300px;
+  resize: none;
+}
+
+.consultation-input::placeholder,
+.consultation-textarea::placeholder {
+  color: gray;
+}
+
+@media (max-width: 900px) {
+  body {
+    padding: 0 50px;
+  }
+  .consultation-container {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .consultation-text,
+  .consultation-form {
+    width: 100%;
+  }
+}
+
+.consultation-section {
+  padding: 70px 75px;
+}
+
+
+.footer-container {
+  background-color: #262626;
+  width: 100%; 
+  padding: 100px;
+  border-radius: 30px;
+  text-align: center;
+  color: white;
+  font-family: 'Courier Prime', monospace;
+  box-shadow: 0px 0px 20px rgba(0, 200, 255, 0.5);
+}
+
+.footer-title {
+  font-size: 80px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-size: 18px;
+  color: #bbb;
+  margin-bottom: 30px;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+  color: white;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px;
+  border-radius: 15px;
+  width: 400px;
+  margin: 0 auto 30px;
+  border: 2px solid rgba(0, 200, 255, 0.5);
+}
+
+.footer-social a {
+  color: rgba(0, 200, 255, 0.8);
+  font-size: 24px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.footer-social a:hover {
+  transform: scale(1.2);
+}
+
+.footer-location {
+  font-size: 18px;
+  color: #bbb;
+}
+
+.footer-section {
+  padding: 60px;
+}
+
+.footer-social a {
+  padding-right:10px;
+}
+
+
+
+/* Mobile - Small screens */
+@media (max-width: 576px) {
+  .navbar {
+    width: 100%;
+    margin: 8px;
+    border-radius: 10px;
+  }
+
+  .navbar-nav {
+    display: block;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.5rem 0;
+  }
+
+  .phone-button {
+    margin-right: 20px;
+    font-size: 0.9rem;
+  }
+
+  .mediumcontent {
+    flex-direction: column;
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  #text-container {
+    font-size: 3em;
+    line-height: 100px;
+    width: 100%;
+  }
+
+  .expert-card {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .expert-image-wrapper {
+    width: 100%;
+  }
+
+  .expert-info {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .expert-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .banner {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .logo img {
+    max-height: 80px;
+  }
+
+  .custom-button {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 10px;
+  }
+
+  .books .topbooks {
+    flex-direction: column;
+  }
+
+  .bookone img, .booktwo img {
+    width: 100%;
+  }
+
+  .consultation-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .consultation-text {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .consultation-title {
+    font-size: 2rem;
+  }
+
+  .consultation-description {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .footer-container {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .footer-nav a {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .footer-social {
+    margin-top: 20px;
+  }
+}
+
+/* Tablet - Medium screens */
+@media (max-width: 768px) {
+  .navbar {
+    width: 100%;
+    margin: 10px;
+    border-radius: 15px;
+  }
+
+  .navbar-nav {
+    display: block;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.5rem 0;
+  }
+
+  .phone-button {
+    margin-right: 25px;
+    font-size: 1rem;
+  }
+
+  .mediumcontent {
+    flex-direction: column;
+    padding: 70px 50px;
+  }
+
+  #text-container {
+    font-size: 4em;
+    line-height: 120px;
+    width: 100%;
+  }
+
+  .expert-card {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .expert-image-wrapper {
+    width: 100%;
+  }
+
+  .expert-info {
+    padding: 1.2rem;
+    text-align: center;
+  }
+
+  .expert-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .banner {
+    flex-direction: column;
+    height: auto;
+    padding: 25px;
+  }
+
+  .logo img {
+    max-height: 90px;
+  }
+
+  .custom-button {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .books .topbooks {
+    flex-direction: column;
+  }
+
+  .bookone img, .booktwo img {
+    width: 100%;
+  }
+
+  .consultation-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .consultation-text {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .consultation-title {
+    font-size: 2.5rem;
+  }
+
+  .consultation-description {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+  }
+
+  .footer-container {
+    text-align: center;
+    padding: 30px;
+  }
+
+  .footer-nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .footer-social {
+    margin-top: 30px;
+  }
+}
+
+/* Large screens */
+@media (max-width: 992px) {
+  .navbar {
+    width: 100%;
+    margin: 12px;
+    border-radius: 15px;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.5rem 0;
+  }
+
+  .phone-button {
+    margin-right: 30px;
+    font-size: 1.1rem;
+  }
+
+  .mediumcontent {
+    padding: 80px 70px;
+  }
+
+  #text-container {
+    font-size: 5em;
+    line-height: 130px;
+    width: 100%;
+  }
+
+  .expert-card {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .expert-image-wrapper {
+    width: 100%;
+  }
+
+  .expert-info {
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .expert-info h3 {
+    font-size: 1.4rem;
+  }
+
+  .banner {
+    flex-direction: row;
+    height: 150px;
+  }
+
+  .logo img {
+    max-height: 100px;
+  }
+
+  .custom-button {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .books .topbooks {
+    flex-direction: column;
+  }
+
+  .bookone img, .booktwo img {
+    width: 100%;
+  }
+
+  .consultation-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .consultation-text {
+    max-width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .consultation-title {
+    font-size: 3rem;
+  }
+
+  .consultation-description {
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+  }
+
+  .footer-container {
+    text-align: center;
+    padding: 40px;
+  }
+
+  .footer-nav a {
+    display: block;
+    margin: 15px 0;
+  }
+
+  .footer-social {
+    margin-top: 40px;
+  }
+}
+
+/* Desktop - Extra Large screens */
+@media (min-width: 1200px) {
+  .navbar {
+    width: 90%;
+    margin: 16px auto;
+    border-radius: 20px;
+  }
+
+  .phone-button {
+    margin-right: 40px;
+  }
+
+  .mediumcontent {
+    padding: 100px 98px;
+  }
+
+  #text-container {
+    font-size: 6em;
+    line-height: 140px;
+    width: 38% !important;
+  }
+
+  .expert-card {
+    flex-direction: row;
+    height: 560px;
+  }
+
+  .expert-image-wrapper {
+    min-width: 250px;
+    max-width: 446px;
+  }
+
+  .expert-info {
+    padding: 1.5rem;
+  }
+
+  .banner {
+    flex-direction: row;
+    height: 150px;
+  }
+
+  .logo img {
+    max-height: 100px;
+  }
+
+  .custom-button {
+    width: 260px;
+    margin-right: 81px;
+  }
+
+  .books .topbooks {
+    display: flex;
+    justify-content: center;
+  }
+
+  .bookone img {
+    width: 643px;
+  }
+
+  .booktwo img {
+    width: 627px;
+  }
+
+  .consultation-container {
+    flex-direction: row;
+  }
+
+  .footer-container {
+    text-align: center;
+    padding: 40px;
+  }
+
+  .footer-nav a {
+    display: inline-block;
+    margin: 0 20px;
+  }
+
+  .footer-social {
+    margin-top: 20px;
+  }
+}
