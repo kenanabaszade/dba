@@ -848,6 +848,10 @@ body {
   }
 }
 
+.button-outersecond {
+  width: 170px;
+}
+
 /* Tablet - Medium screens */
 @media (max-width: 768px) {
   .navbar {
@@ -855,10 +859,133 @@ body {
     margin: 10px;
     border-radius: 15px;
   }
+  .mediumcontent {
+    padding: 0 !important;
+  }
+  #text-container {
+    font-size: 3em !important;
 
+  }
+  .mediumcontent img {
+    width: 100%;
+  }
+
+  .teachers-container {
+    flex-direction: column;
+  }
+
+  .expert-card {
+    width: 100%;
+  }
+
+  .experts-section {
+    padding: 0;
+  }
+
+  .expert-info {
+    width: 100%;
+  }
+
+  .expert-card {
+    height: 100% !important;
+  }
+
+  .topbooks img {
+    width: 100% !important;
+  }
+
+  .books .topbooks {
+    flex-direction: row !important;
+  }
+
+  .bottombooks {
+    display: block;
+    padding: 20px 5px;
+  }
+
+  .consultation-title {
+    font-size: 15px !important;
+  }
+
+  .consultation-section {
+    padding: 0 !important;
+  }
+
+  .consultation-container {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .footer-title {
+    font-size: 50px;
+  }
+
+  .footer-social img {
+    width: 30px;
+    
+  }
+
+  body {
+    padding: 0 30px;
+  }
+
+  .footer-social {
+    width: 100%;
+  }
+  .custom-button {
+    margin: 0;
+  }
+
+  .custom-button {
+    width: 100% !important;
+    margin-right: 0;
+  }
+
+  .button-outer {
+    width: 100%;
+  }
+
+  .mobilephone {
+    font-size: 10px;
+  }
+
+  .button-outer {
+    margin: 5px 0;
+  }
+
+  .footer-nav {
+    display: block;
+  }
   .navbar-nav {
     display: block;
     text-align: center;
+  }
+
+  .footer-container {
+    padding: 0;
+  }
+
+  .footer-section {
+    padding:20px 0;
+  }
+
+  .footer-nav {
+    text-align: start;
+  }
+
+  .footer-nav a {
+    display: block;
+    padding: 5px 0;
+  }
+  
+  .button-outer {
+    width: 100%;
+    margin-right: 0;
+  }
+  
+  .consultation-button {
+    width: 100%;
+    margin-right: 0;
   }
 
   .navbar-nav .nav-link {
