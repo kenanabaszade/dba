@@ -14,9 +14,9 @@ function typeWriter(text, elementId, speed) {
 
 window.onload = function () {
     typeWriter("DATA BASE IS NOT BLACK BOX!", "text-container", 200);
-    typeWriter("Mütəxəssislər", "section-title", 150);
-    typeWriter("Tərəfdaşlar", "section-title2", 150);
-    typeWriter("Kitablar", "section-title3", 150);
+    typeWriter("Mütəxəssislər", "section-title", 550);
+    typeWriter("Tərəfdaşlar", "section-title2", 750);
+    typeWriter("Kitablar", "section-title3", 850);
 };
 function sendMessage() { 
     const name = document.getElementById('name').value;
