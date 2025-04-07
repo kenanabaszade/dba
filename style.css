@@ -420,8 +420,7 @@ body {
 .logo img:hover {
   filter: grayscale(0%);
 }
-
-.button-outer {
+ .button-outer {
   position: relative;
   width: 260px;
   margin-right: 81px;
@@ -440,15 +439,6 @@ body {
   mask-composite: exclude;
   pointer-events: none;
   z-index: 1;
-}.button-outer::before {
-  background: linear-gradient(90deg, rgba(0, 200, 255, 0.1), rgba(0, 200, 255, 0.9));
-  animation: borderRotate 2500ms linear infinite forwards;
-}
-
-@keyframes borderRotate {
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 /* Using ::after for the glow backdrop */
@@ -468,8 +458,8 @@ body {
   opacity: 1;
 }
 
-/* For browsers that support @property */
-@supports (animation-timeline: scroll()) {
+/* Only apply animation if the browser supports @property and conic-gradient */
+@supports (animation-timeline: scroll()) and (--angle: 90deg) {
   @property --angle {
     syntax: "<angle>";
     initial-value: 90deg;
@@ -495,17 +485,11 @@ body {
   }
 }
 
-/* Fallback animation for browsers that don't support @property */
-@supports not (animation-timeline: scroll()) {
+/* Fallback animation for browsers that don't support @property or conic-gradient */
+@supports not (animation-timeline: scroll()) or not (--angle: 90deg) {
   .button-outer::before {
-    background: conic-gradient(rgba(0, 200, 255, 0.1), rgba(0, 200, 255, 0.9) 10%, rgba(0, 200, 255, 0.9) 15%, rgba(0, 200, 255, 0.1) 25%);
-    animation: rotate 2.5s linear infinite;
-  }
-
-  @keyframes rotate {
-    to {
-      transform: rotate(360deg);
-    }
+    background: linear-gradient(90deg, rgba(0, 200, 255, 0.1), rgba(0, 200, 255, 0.9));
+    animation: none; /* Disable animation */
   }
 }
 
@@ -528,6 +512,7 @@ body {
 .custom-button:hover {
   box-shadow: 0px 0px 12px rgba(0, 200, 255, 0.8);
 }
+
 
 .books {
   background: #262626;
