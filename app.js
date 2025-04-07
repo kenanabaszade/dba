@@ -38,3 +38,20 @@ function sendWhatsAppMessage(message) {
   var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
   window.open(url, '_blank');
 }
+
+
+document.querySelectorAll('.expert-card').forEach(card => {
+    card.addEventListener('click', function () {
+      // Check if the card is already expanded
+      if (this.classList.contains('expanded')) {
+        this.classList.remove('expanded');
+      } else {
+        // Remove 'expanded' from other cards
+        // document.querySelectorAll('.expert-card').forEach(otherCard => {
+        //   otherCard.classList.remove('expanded');
+        // });
+        this.classList.add('expanded');
+      }
+    });
+  });
+  
