@@ -11,36 +11,45 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="container mw-100">
+      <div class="container-fluid">
+        <!-- Use container-fluid for full-width responsiveness -->
         <!-- Logo/Brand -->
-        <a class="navbar-brand ms-5" href="/"><img src="/assets/imgs/dbalogo.png" alt="" style="width: 175px" /></a>
-
-        <!-- Toggler button (for mobile) -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
+        <div>
+          <a class="navbar-brand ms-5" href="/"><img src="/assets/imgs/dbalogo.png" alt=""  class="img-fluid logoimage" /></a>
+        </div>
+        <div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
         <!-- Navbar links -->
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 d-flex align-items-center justify-content-center navbaranimation">
-            <li class="nav-item me-5">
-              <a class="nav-link active" href="#">Mütəxəssislər</a>
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 w-100 d-flex align-items-center justify-content-center navbaranimation">
+            <li class="nav-item me-4">
+              <a class="nav-link active" href="#section-title">Mütəxəssislər</a>
             </li>
-            <li class="nav-item me-5">
-              <a class="nav-link" href="#">Tərəfdaşlar</a>
+            <li class="nav-item me-4">
+              <a class="nav-link" href="#section-title2">Tərəfdaşlar</a>
             </li>
-            <li class="nav-item me-5">
-              <a class="nav-link" href="#">Kitablar</a>
+            <li class="nav-item me-4">
+              <a class="nav-link" href="#section-title3">Kitablar</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Konsultasiya</a>
+              <a class="nav-link" href="#section-title4">Konsultasiya</a>
             </li>
           </ul>
         </div>
-        <a href="tel:+994559409565" class="btn phone-button d-flex align-items-center">
-          <span class="me-2"><img src="./assets/gifs/phone (2).gif" style="width: 19px; margin-top: 4px" /></span>
-          <span class="mobilephone">+994 55 940 95 65</span>
-        </a>
+
+        <!-- Phone Button -->
+        <div class="phonebtn">
+          <a href="tel:+994559409565" class="btn phone-button d-flex align-items-center justify-content-center d-lg-block">
+            <span class="me-2"><img src="./assets/gifs/phone (2).gif" style="width: 19px; margin-top: 4px" /></span>
+            <span class="mobilephone">+994 55 940 95 65</span>
+          </a>
+        </div>
+
+        <!-- Toggler button (for mobile) -->
+       
       </div>
     </nav>
 
@@ -140,13 +149,13 @@
         </div>
         <div class="bottombooks">
           <div class="button-outer">
-            <button class="custom-button">Təlimə qoşul</button>
+            <button class="custom-button" onclick="sendWhatsAppMessage('Salam SQL və PL/SQL təlimə qoşulmaq istəyirəm.')">Təlimə qoşul</button>
           </div>
           <div class="button-outer">
-            <button class="custom-button">Yüklə</button>
+            <a href="/assets/SQLPlSqlBookmündəricatcombined.pdf" download> <button class="custom-button">Yüklə</button></a>
           </div>
           <div class="button-outer">
-            <button class="custom-button">Sifariş et</button>
+            <button class="custom-button" onclick="sendWhatsAppMessage('Kitab sifariş etmək istəyirəm')">Sifariş et</button>
           </div>
         </div>
       </div>
@@ -155,7 +164,7 @@
     <section class="consultation-section">
       <div class="consultation-container">
         <div class="consultation-text">
-          <h1 class="consultation-title">
+          <h1 class="consultation-title" id="section-title4">
             Konsultasiyaya <br />
             dəvət edirik!
           </h1>
@@ -175,12 +184,14 @@
 
     <section class="footer-section">
       <div class="footer-container">
-        <h1 class="footer-title">dba.az</h1>
+        <a href="/" class="text-decoration-none text-white">
+          <h1 class="footer-title">dba.az</h1>
+        </a>
         <div class="footer-nav">
-          <a href="#">Mütəxəssislər</a>
-          <a href="#">Tərəfdaşlar</a>
-          <a href="#">Kitablar</a>
-          <a href="#">Konsultasiya</a>
+          <a href="#section-title">Mütəxəssislər</a>
+          <a href="#section-title2">Tərəfdaşlar</a>
+          <a href="#section-title3">Kitablar</a>
+          <a href="#section-title4">Konsultasiya</a>
         </div>
         <div class="footer-social">
           <a href="#"><img src="/assets/imgs/facebookicon.png" /></a>
