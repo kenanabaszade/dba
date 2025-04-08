@@ -1135,7 +1135,7 @@ body {
   }
 
   .expert-card  {
-    height: 200px !important;
+    height: 200px ;
   }
 
   .navbar-nav .nav-link {
