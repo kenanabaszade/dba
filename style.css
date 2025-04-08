@@ -261,16 +261,11 @@ body {
   width: 50px; /* Line width */
 }
 
-
-
-
-
 /* Set a specific height for the card when expanded */
 .expert-card.expanded {
   height: auto !important;
 }
 
- 
 .expert-card {
   height: 560px;
   overflow: hidden;
@@ -281,7 +276,6 @@ body {
   -o-transition: all 0.5s ease;
 }
 
- 
 /* Top border animation */
 .navbaranimation::before {
   top: -2px;
@@ -323,7 +317,7 @@ body {
   font-size: 6em;
   line-height: 140px;
   overflow: hidden;
-  width: 39%;
+  width: 38%;
   height: 420px;
   color: white;
 }
@@ -443,7 +437,7 @@ body {
 .logo img:hover {
   filter: grayscale(0%);
 }
- .button-outer {
+.button-outer {
   position: relative;
   width: 260px;
   margin-right: 81px;
@@ -535,7 +529,6 @@ body {
 .custom-button:hover {
   box-shadow: 0px 0px 12px rgba(0, 200, 255, 0.8);
 }
-
 
 .books {
   background: #262626;
@@ -816,7 +809,7 @@ body {
   #text-container {
     font-size: 3em;
     line-height: 100px;
-    width: 100%;
+    width: 90% !important;
   }
 
   .expert-card {
@@ -1132,10 +1125,10 @@ body {
     width: 100%;
     margin: 12px;
     border-radius: 15px;
-  }
+  } 
 
-  .expert-card  {
-    height: 200px ;
+  .expert-card {
+    height: 200px;
   }
 
   .navbar-nav .nav-link {
@@ -1249,8 +1242,12 @@ body {
     padding: 100px 98px;
   }
 
+  .mediumcontent img {
+    width: 80%;
+  }
+
   #text-container {
-    width: 100%;
+    width: 55%;
     font-size: 5em;
   }
 
