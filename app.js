@@ -13,7 +13,7 @@ function typeWriter(text, elementId, speed) {
 }
 
 window.onload = function () {
-  typeWriter("DATABASE IS NOT BLACK BOX!", "text-container", 200);
+  typeWriter("DATABASE IS NOT BLACK BOX", "text-container", 200);
   typeWriter("Mütəxəssislər", "section-title", 550);
   typeWriter("Tərəfdaşlar", "section-title2", 750);
   typeWriter("Kitablar", "section-title3", 850);
