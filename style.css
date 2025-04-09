@@ -732,6 +732,11 @@ body {
   margin-left: 50px;
 }
 
+.footerlogo {
+  width: 186px;
+  margin-left: 50px;
+}
+
 /* Mobile - Small screens */
 @media (max-width: 576px) {
   .navbar {
@@ -740,6 +745,12 @@ body {
     border-radius: 10px;
   }
 
+
+  .footerlogo {
+    
+    width: 84%;
+    margin-left: 0;
+  }
   .mobileversion .navbar-nav {
     border: none !important;
   }
@@ -1126,7 +1137,7 @@ body {
     width: 100%;
     margin: 12px;
     border-radius: 15px;
-  } 
+  }
 
   .expert-card {
     height: 200px;
@@ -1240,7 +1251,7 @@ body {
   }
 
   .mediumcontent {
-    padding: 0 0 0 82px ;
+    padding: 0 0 0 82px;
   }
 
   .mediumcontent img {
