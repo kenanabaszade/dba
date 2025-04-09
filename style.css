@@ -728,7 +728,8 @@ body {
 }
 
 .logoimage {
-  width: 175px;
+  width: 132px;
+  margin-left: 50px;
 }
 
 /* Mobile - Small screens */
