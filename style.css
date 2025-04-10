@@ -730,7 +730,7 @@ body {
 .logoimage {
   width: 132px;
   margin-left: 50px;
-}
+}   
 
 .footerlogo {
   width: 186px;
@@ -745,7 +745,9 @@ body {
     border-radius: 10px;
   }
 
-
+  .logoimage {
+    margin-left: 5px;
+  }
   .footerlogo {
     
     width: 84%;
